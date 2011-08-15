@@ -1,0 +1,41 @@
+%% DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+%% Copyright (c) 2009-2011, ILYA Khlopotov. All rights reserved.
+%%
+%% The contents of this file are subject to the terms of either the GNU
+%% General Public License ("GPL") version 2, or any later version,
+%% or the Common Development and Distribution License ("CDDL") 
+%% (collectively, the "License"). 
+%% You may not use this file except in compliance with the License. 
+%% 
+%% This program is distributed in the hope that it will be useful,
+%% but WITHOUT ANY WARRANTY; without even the implied warranty of
+%% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+%%
+%% You should have received a copy of the GNU General Public License
+%% along with this program.  If not, see http://www.gnu.org/licenses/
+%%
+%% You should have received a copy of the 
+%% Common Development and Distribution License along with this program.  
+%% If not, see http://www.opensource.org/licenses/
+
+{application, common.node,
+ [
+  {description, "Control erlang nodes"},
+  {vsn, "1"},
+  {modules, [
+  	     common.node.node,
+	     common.node.init,
+	     common.node.boot_client,
+	     common.node.boot_server,
+	     common.node.app,
+	     common.node.sup,
+	     common.node.code
+	    ]},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []},
+  {mod, {common.node.app, []}} %% role will come from command line
+ ]}.

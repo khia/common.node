@@ -1,0 +1,2 @@
+-define(default_client_node, init_client).
+-define(default_client_cookie, 'ASDFKLJASDFJklaslkf213487DASKJLKNVMX').
